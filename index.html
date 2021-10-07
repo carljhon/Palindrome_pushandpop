@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="script.js"></script>
+      <!--
+      Create a function that would return if
+      the string given is a palindrome or not. Where
+      the function must use only Stack Data Structures (push & pop, shift & unshift) -- NO INDEXING OR BRACKET EXPRESSION.
+
+      --> 
+  </head>
+  <body>
+  <!-- the id demo is where the output of scripts will print -->
+    <p id="demo"></p>
+
+    <script>
+      var name = window.prompt("Enter a Palindrome string: ");
+      //first split the str
+      var str_split = name.split("");
+      let i = "";
+      let j = 0;
+      //default final output
+      var final = "";
+
+      //loop max_length to 0
+      while (j < name.length){
+          //get all last split elements 
+          //reverse 
+          i += str_split.pop();
+          j++;
+      }
+
+      if (i == name){
+          final = "Yes its palindrome";
+      }
+      else if (i != name){
+          final = "Not a palindrome";
+      }
+
+      //printing the final output inside a html        
+document.getElementById("demo").innerHTML = final;     
+      
+    </script>
+  </body>
+</html>
